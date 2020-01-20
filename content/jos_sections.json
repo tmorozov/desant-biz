@@ -1,0 +1,14 @@
+[
+{"type":"header","version":"4.9.4","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"desant_joomla15"},
+{"type":"table","name":"jos_sections","database":"desant_joomla15","data":
+[
+{"id":"8","title":"Игры","name":"","alias":"igri","image":"","scope":"content","image_position":"left","description":"","published":"1","checked_out":"0","checked_out_time":"0000-00-00 00:00:00","ordering":"6","access":"0","count":"3","params":""},
+{"id":"3","title":"Команда","name":"","alias":"komanda","image":"","scope":"content","image_position":"left","description":"","published":"1","checked_out":"77","checked_out_time":"2014-06-17 14:08:38","ordering":"1","access":"0","count":"9","params":""},
+{"id":"4","title":"Снаряжение","name":"","alias":"snarjazenie","image":"","scope":"content","image_position":"left","description":"","published":"1","checked_out":"0","checked_out_time":"0000-00-00 00:00:00","ordering":"2","access":"0","count":"6","params":""},
+{"id":"6","title":"Для зарегистрированных","name":"","alias":"sekretno","image":"","scope":"content","image_position":"left","description":"","published":"1","checked_out":"77","checked_out_time":"2014-02-15 20:21:57","ordering":"4","access":"1","count":"3","params":""},
+{"id":"7","title":"Товары и услуги","name":"","alias":"magazin","image":"","scope":"content","image_position":"left","description":"","published":"1","checked_out":"62","checked_out_time":"2009-04-14 17:31:12","ordering":"5","access":"0","count":"6","params":""},
+{"id":"9","title":"FAQ","name":"","alias":"faq","image":"","scope":"content","image_position":"left","description":"","published":"1","checked_out":"77","checked_out_time":"2014-02-15 20:30:33","ordering":"7","access":"0","count":"1","params":""}
+]
+}
+]
