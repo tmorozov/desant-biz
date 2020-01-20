@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         padding: '10px'
       }}>{children}</main>
       <footer style={{
-        background: 'transparent url(../images/bottom.jpg) 0 0 no-repeat',
+        background: 'transparent url(/images/bottom.jpg) 0 0 no-repeat',
         height: '100px'
       }} />
     </div>
