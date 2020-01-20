@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: arial;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,6 +7,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background: #000000 url(../images/body-bg.jpg) 0 100px fixed no-repeat;
 }
 article,
 aside,
