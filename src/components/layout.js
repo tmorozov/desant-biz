@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Header = styled.header`
-  background: transparent url(/images/header.jpg) 0 0 no-repeat;
+  background: transparent url("../images/header.jpg") 0 0 no-repeat;
   height: 388px;
 `;
 
