@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, {createGlobalStyle} from "styled-components"
 import "normalize.css";
-
+import headerImage from "../images/header.jpg";
 import {Menu} from './menu';
 
 const GlobalStyle = createGlobalStyle`
@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Header = styled.header`
-  background: transparent url("../images/header.jpg") 0 0 no-repeat;
+  background: transparent url(${headerImage}) 0 0 no-repeat;
   height: 388px;
 `;
 
