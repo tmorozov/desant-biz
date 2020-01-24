@@ -11,6 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled, {createGlobalStyle} from "styled-components"
 import "normalize.css";
 import headerImage from "../images/header.jpg";
+import footerImage from "../images/bottom.jpg";
+import backgroundImage from "../images/body-bg.jpg";
+
 import {Menu} from './menu';
 
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: #000000 url(/images/body-bg.jpg) 0 100px fixed no-repeat;
+    background: #000000 url(${backgroundImage}) 0 100px fixed no-repeat;
   }
   a {
       text-decoration: none;
@@ -61,7 +64,7 @@ const Main = styled.main`
 `;
 
 const Footer = styled.footer`
-  background: transparent url(/images/bottom.jpg) 0 0 no-repeat;
+  background: transparent url(${footerImage}) 0 0 no-repeat;
   height: 100px;
 `;
 
