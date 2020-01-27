@@ -44,8 +44,14 @@ const homePageMoreArticles = [
   "vintorez"
 ].map(getByAlias);
 
+const ustav = getByAlias("ustav");
+
 module.exports = {
   articles,
+  categories, 
+  sections, 
+  sectionsById,
   homePageArticles,
-  homePageMoreArticles
+  homePageMoreArticles,
+  ustav
 }

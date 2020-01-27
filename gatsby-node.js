@@ -6,15 +6,7 @@
 
 // You can delete this file if you're not using it
 
-const byId = (arr) => arr.reduce((acc, cur) => {
-  acc[cur.id] = cur;
-  return acc;
-}, {});
-
-const categories = require("./content/jos_categories.json")[2].data;
-const sections = require("./content/jos_sections.json")[2].data;
-const sectionsById = byId(sections);
-const {articles} = require("./data/articles");
+const {articles, categories, sections, sectionsById} = require("./data/articles");
 
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
@@ -39,7 +31,7 @@ exports.createPages = ({ actions }) => {
       .filter(art => art.catid === id)
       .sort((a, b) => a.order-b.order);
     const path = [sectionPart, `/${alias}`].join('');
-    console.log("Cat:", path, title);
+
     createPage({
       path,
       component: require.resolve("./src/templates/sectionTemplate.js"),
