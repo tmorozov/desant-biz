@@ -1,20 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import {DynamicLayout} from "../components/dynamic-layout";
+import {Preview} from "../components/preview";
+import {MoreArticles} from "../components/more-articles";
+import {homePageArticles, homePageMoreArticles} from "../../data/articles";
+
+const exampleStructure = homePageArticles.map(row => {
+  return row.map(({title, introtext, path, fulltext}) => (
+  <Preview 
+    title={title} 
+    introtext={introtext} 
+    path={path} 
+    fulltext={fulltext}
+  />)
+  );
+})
+
 
 const IndexPage = ({location}) => (
   <Layout location={location}>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h2>Страйкбольная команда Сфинкс. Город Львов.</h2>
+    
+    <DynamicLayout structure={exampleStructure} />
+    <MoreArticles articles={homePageMoreArticles}/>
   </Layout>
 )
 

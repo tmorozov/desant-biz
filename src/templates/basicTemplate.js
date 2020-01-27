@@ -1,18 +1,21 @@
 import React from "react"
+// import styled from "styled-components"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { HtmlContentWrapper } from "../components/html-content-wrapper"
 
 const basicTemplate = props => {
   const { pageContext, location } = props
-  const { pageContent, title, author } = pageContext
+  const { fulltext, introtext, title, author, created } = pageContext
   return (
   <Layout location={location}>
     <SEO title={title} />
-    <h2>{title}</h2>
-    <h4>Автор: {author}</h4>
-    <div dangerouslySetInnerHTML={{__html: pageContent}} />
+    <h1>{title}</h1>
+    <HtmlContentWrapper dangerouslySetInnerHTML={{__html: fulltext || introtext }} />
+    <div>Автор: {author}</div>
+    <div>Дата: {created}</div>
   </Layout>
   )
 }
