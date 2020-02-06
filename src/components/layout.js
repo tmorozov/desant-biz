@@ -102,6 +102,7 @@ const Layout = (props) => {
         <Menu location={props.location}/>
       </Aside>
     </Page>
+    <div id="modal-root" />
     </>
   )
 }
