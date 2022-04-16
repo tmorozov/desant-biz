@@ -8,13 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled, {createGlobalStyle} from "styled-components"
-import "normalize.css";
-import headerImage from "../images/header.jpg";
-import footerImage from "../images/bottom.jpg";
-import backgroundImage from "../images/body-bg.jpg";
+import styled, { createGlobalStyle } from "styled-components"
+import "normalize.css"
+import headerImage from "../images/header.jpg"
+import footerImage from "../images/bottom.jpg"
+import backgroundImage from "../images/body-bg.jpg"
 
-import {Menu} from './menu';
+import { Menu } from "./menu"
+import { HelpUkraine } from "./help-ukraine"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -38,47 +39,47 @@ const GlobalStyle = createGlobalStyle`
 const Header = styled.header`
   background: transparent url(${headerImage}) 0 0 no-repeat;
   height: 388px;
-`;
+`
 
 const Page = styled.div`
   margin: 0 auto;
   display: flex;
   max-width: calc(790px + 184px);
-`;
+`
 
 const Container = styled.div`
   width: 790px;
-`;
+`
 
 const Main = styled.main`
-  background: #A86242;
+  background: #a86242;
   padding: 10px;
   img {
     margin: 5px;
     padding: 1px;
-    border-top: 1px solid #FFFFCC;
-    border-right: 1px solid #FFFF99;
-    border-bottom: 1px solid #FFFF99;
-    border-left: 1px solid #FFFFCC;
+    border-top: 1px solid #ffffcc;
+    border-right: 1px solid #ffff99;
+    border-bottom: 1px solid #ffff99;
+    border-left: 1px solid #ffffcc;
   }
-`;
+`
 
 const Footer = styled.footer`
   background: transparent url(${footerImage}) 0 0 no-repeat;
   height: 100px;
-`;
+`
 
 const Aside = styled.aside`
   width: 184px;
-  text-align: center;
+  /* text-align: center; */
   font-size: 12px;
   margin-top: 100px;
   background-color: #000000;
-  color: #FFFFCC;
+  color: #ffffcc;
   min-height: 400px;
-`;
+`
 
-const Layout = (props) => {
+const Layout = props => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -91,18 +92,19 @@ const Layout = (props) => {
 
   return (
     <>
-    <GlobalStyle />
-    <Page>
-      <Container>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Main>{props.children}</Main>
-        <Footer/>
-      </Container>
-      <Aside>
-        <Menu location={props.location}/>
-      </Aside>
-    </Page>
-    <div id="modal-root" />
+      <GlobalStyle />
+      <Page>
+        <Container>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <Main>{props.children}</Main>
+          <Footer />
+        </Container>
+        <Aside>
+          <HelpUkraine />
+          <Menu location={props.location} />
+        </Aside>
+      </Page>
+      <div id="modal-root" />
     </>
   )
 }
